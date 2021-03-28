@@ -5,8 +5,8 @@ import { Text } from 'react-native';
 
 const rule: Rule = {
   id: 'accessibility-label-button',
-  matcher: (node) => isButton(node.type),
-  assertion: (node) => {
+  matcher: node => isButton(node.type),
+  assertion: node => {
     let textNode = getTextNode(node);
     if (!textNode) return false;
     const textContent = textNode.props.children;

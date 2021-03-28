@@ -3,8 +3,8 @@ import { canBeDisabled } from '../../helpers';
 
 const rule: Rule = {
   id: 'accessibility-state-disabled',
-  matcher: (node) => canBeDisabled(node),
-  assertion: (node) => node.props.accessibilityState?.disabled !== undefined,
+  matcher: node => canBeDisabled(node),
+  assertion: node => node.props.accessibilityState?.disabled !== undefined,
   help: {
     problem: "Expose the components's enabled/disabled state to the user",
     solution:

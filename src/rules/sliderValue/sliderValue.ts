@@ -3,8 +3,8 @@ import { isSlider } from '../../helpers';
 
 const rule: Rule = {
   id: 'accessibility-value-slider',
-  matcher: (node) => isSlider(node),
-  assertion: (node) => {
+  matcher: node => isSlider(node),
+  assertion: node => {
     return (
       node.props.accessibilityValue?.now !== undefined &&
       node.props.accessibilityValue?.min !== undefined &&

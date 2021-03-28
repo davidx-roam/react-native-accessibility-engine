@@ -20,7 +20,7 @@ const RootNavigator = () => {
           title: 'Testing Ground',
         }}
       />
-      {Screens.map((screen) => (
+      {Screens.map(screen => (
         // @ts-ignore
         <Stack.Screen {...screen} />
       ))}

@@ -3,8 +3,8 @@ import { isButton } from '../../helpers';
 
 const rule: Rule = {
   id: 'accessible-button',
-  matcher: (node) => isButton(node.type),
-  assertion: (node) => {
+  matcher: node => isButton(node.type),
+  assertion: node => {
     return node.props.accessible === false ? false : true;
   },
   help: {
